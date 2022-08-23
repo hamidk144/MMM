@@ -1,0 +1,32 @@
+.featured_swiper{
+
+    width: 75%;
+    height: 45vh;
+    color: rgba(255, 255, 255, 0.975);
+    padding-top: 20px;
+    
+    
+   
+}
+
+.featuredSlide{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    
+}
+
+.featuredSlide > img{
+width: 96%;
+height: 90%;
+object-fit: cover;
+
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: white !important;
+   
+}
