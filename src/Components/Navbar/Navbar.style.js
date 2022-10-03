@@ -24,7 +24,6 @@ border-bottom: 0.1px solid rgba(76, 17, 25, 0.349);
 z-index: 100;
 height: 70px;
 
-
 .active{
 color: crimson !important;
 }
@@ -33,8 +32,6 @@ text-decoration: none !important;
 color: black; 
 }
 transition: transform 1s ease;
-
-
 
 position: sticky !important;
 top:0px !important;
@@ -65,7 +62,6 @@ align-items: center;
 export const NavItems = styled.h3`
 
 &:hover{
-    transform: scale(0.98);
     opacity: 0.7;
     color: crimson !important;
     
@@ -83,6 +79,13 @@ transition: transform 0.15s ease;
 .link{
     text-decoration: none !important;
     color: ${ ({variant})=>{return(variant==='mainColor'? 'black' : '#fff')} };
+  
+    
+}
+
+.products{
+    text-decoration: none !important;
+    color: black;
   
     
 }
@@ -153,5 +156,38 @@ display: flex;
 align-items: center;
 width: 80px;
 justify-content: space-between;
+
+`
+export const ProductsContainer= styled.div`
+display:flex;
+flex-direction:column;
+position:relative;
+`
+
+export const SubMenu = styled.div`
+position: absolute;
+width: 180px;
+top: 36px;
+background-color: white;
+
+`
+
+
+export const MenuItems = styled.div`
+
+padding: 6px;
+font-size: 14px;
+border-bottom: 0.1px solid lightgrey;
+color:grey;
+cursor: pointer;
+
+&:hover{
+  background-color: rgb(231, 231, 231);
+}
+
+span{
+  margin-left: 3px;
+}
+
 
 `
