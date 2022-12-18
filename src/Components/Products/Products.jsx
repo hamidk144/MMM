@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { mobilephones, mobileAcc, repairAcc } from "../../data";
+import { media } from "../../globalStyles";
 import Product from "../Product/Product";
 
 
@@ -11,6 +12,11 @@ margin-top: 50px;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    ${media.mobile}{
+      width:100vw;
+      margin-top:20px;
+      gap:10px;
+    }
 `;
 
 const Products = ({type}) => {

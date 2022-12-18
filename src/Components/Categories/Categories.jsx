@@ -16,6 +16,7 @@ const Categories = () => {
       <Title>Categories</Title>
 
       <CategoriesContainer>
+        
         <CategoryBoxMain> 
           <NavLink className='c-navlink' to='/repairlab'> 
         <SmartphoneOutlined className='categories_icons' /> 
@@ -24,19 +25,20 @@ const Categories = () => {
         </CategoryBoxMain>
 
         <CategoryBox> 
-        <NavLink className='c-navlink' to='/products/mobilephones'>
+        <NavLink className='c-navlink navlinkc2' to='/products/mobilephones'>
           <SmartphoneOutlined className='categories_icons' /> 
            Mobile Phones</NavLink> 
            </CategoryBox>
 
         <CategoryBox> 
-        <NavLink className='c-navlink' to='/products/mobileAcc'>
+        <NavLink className='c-navlink navlinkc2' to='/products/mobileAcc'>
           <Headset className='categories_icons' /> 
          Mobile Accessories
          </NavLink>
          </CategoryBox>
 
-        <CategoryBox><NavLink className='c-navlink' to='/repairAcc'>
+        <CategoryBox>
+          <NavLink className='c-navlink navlinkc2' to='/repairAcc'>
            <SmartphoneOutlined className='categories_icons' /> 
          Repair Accessories
          </NavLink>

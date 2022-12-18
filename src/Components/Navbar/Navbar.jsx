@@ -6,6 +6,8 @@ import {
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import UseClickOutside from "../../Helpers/UseClickOutside";
+import LeftDrawer from "./leftMenu/LeftDrawer";
+import Backdrop from "./leftMenu/Backdrop";
 import {
   CartContainer,
   LogoContainer,
@@ -20,12 +22,14 @@ import {
   Input,
   SubMenu,
   MenuItems,
-  ProductsContainer
+  ProductsContainer,
+  NavMainContainer,
+  BurgerMenu
 } from "./Navbar.style";
 
 const Navbar = () => {
-
     const [isActive, setIsActive] = useState(false);
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
     let menuRef = UseClickOutside(() => {
         setIsActive(false);
@@ -33,6 +37,7 @@ const Navbar = () => {
 
   return (
     <>
+   
       <NavTop>
         <WrapperTop>
           <NavItems variant="white">
@@ -50,7 +55,7 @@ const Navbar = () => {
 
           <NavItems variant="white">
             <Link className="link" to="/cart">
-              Shopping Cart{" "}
+              Cart{" "}
             </Link>
           </NavItems>
 
@@ -82,6 +87,7 @@ const Navbar = () => {
 
             
               <ProductsContainer ref={menuRef}>
+                
               <NavItems variant="mainColor">
                 <div className="products" onClick={()=> setIsActive(true)}>Products</div> </NavItems>
 
@@ -91,7 +97,7 @@ const Navbar = () => {
                   <Link
                     onClick={() => setIsActive(false)}
                     to="/products/mobilePhones"
-                    style={{ color: "grey" }}
+                   className="link"
                   >
                     <MenuItems>
                       Mobile Phones
@@ -100,8 +106,9 @@ const Navbar = () => {
 
                   <Link
                     to="/products/mobileAcc"
-                    style={{ color: "grey" }}
                     onClick={() => setIsActive(false)}
+                   className="link"
+
                   >
                     <MenuItems>
                      
@@ -110,9 +117,10 @@ const Navbar = () => {
                   </Link>
                   <Link
                    
-                   to="/products/mobileAcc"
-                   style={{ color: "grey" }}
+                   to="/products/mobileAcc"                   
                    onClick={() => setIsActive(false)}
+                   className="link"
+
                  >
                   <MenuItems >
                    Repair Accessories
@@ -160,9 +168,19 @@ const Navbar = () => {
                 <span style={{ color: "rgb(203, 45, 65)" }}>0.00 $</span>
               </CartContainer>
             </Link>
+
+
+
+
           </MiddleContent>
+         
         </WrapperMiddle>
+      
+        {isDrawerOpen && <Backdrop setIsDrawerOpen={setIsDrawerOpen} />}
+        <LeftDrawer isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen} />
+      
       </NavMiddle>
+      
     </>
   );
 };

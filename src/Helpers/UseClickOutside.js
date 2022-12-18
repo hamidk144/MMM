@@ -11,9 +11,9 @@ let UseClickOutside = (handler) => {
         handler();
       }
     };
-    document.addEventListener("mousedown", checkHandler);
+    document.addEventListener("click", checkHandler);
     return () => {
-      document.removeEventListener("mousedown", checkHandler);
+      document.removeEventListener("click", checkHandler);
     };
   }, []);
 

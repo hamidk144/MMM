@@ -4,6 +4,7 @@ import {
   ShoppingCartOutlined,
 } from "@material-ui/icons";
 import styled from "styled-components";
+import { media } from "../../globalStyles";
 
 const Info = styled.div`
   opacity: 0;
@@ -36,6 +37,15 @@ const Container = styled.div`
     opacity: 1;
   }
 
+  ${media.mobile}{
+    min-width: ${({ type }) => {
+      return type === "homeproducts" ? "260px" : "150px";
+    }};
+   
+    height: ${({ type }) => {
+      return type === "homeproducts" ? "260px" : "150px";
+    }};
+  }
 
 
 
@@ -47,6 +57,16 @@ const Circle = styled.div`
   border-radius: 50%;
   background-color: #fefeff;
   position: absolute;
+
+  ${media.mobile}{
+    width: ${({ type }) => {
+      return type === "homeproducts" ? "260px" : "140px";
+    }};
+   
+    height: ${({ type }) => {
+      return type === "homeproducts" ? "260px" : "140px";
+    }};
+  }
 `;
 
 const Image = styled.img`
@@ -55,6 +75,16 @@ const Image = styled.img`
   opacity: 0.9;
   object-fit: cover;
   z-index: 2;
+  ${media.mobile}{
+
+    width: ${({ type }) => {
+      return type === "homeproducts" ? "260px" : "150px";
+    }};
+   
+    height: ${({ type }) => {
+      return type === "homeproducts" ? "260px" : "150px";
+    }};
+  }
 `;
 
 const Icon = styled.div`
@@ -73,11 +103,11 @@ const Icon = styled.div`
   }
 `;
 
-const Product = ({ data }) => {
+const Product = ({type, data }) => {
   return (
-    <Container>
-      <Circle />
-      <Image src={data.img} />
+    <Container type={type}>
+      <Circle type={type} />
+      <Image src={data.img} type={type} />
       <Info>
         <Icon>
           <ShoppingCartOutlined />

@@ -16,7 +16,7 @@ import { Navigation, Pagination,Autoplay, Mousewheel, Keyboard } from "swiper";
 
 const Slider = () => {
   return (
-    <>
+  
       <Swiper
        /*  cssMode={true} */
         navigation={true}
@@ -41,7 +41,7 @@ const Slider = () => {
         <SwiperSlide className="mySwiperSlide"><img src="https://media.wired.com/photos/61bb761477cdb999ac10fbab/3:2/w_1280%2Cc_limit/Gear-Oppo-Folding-Phone.jpg" alt="" /></SwiperSlide>
         
       </Swiper>
-    </>
+  
   )
 }
 

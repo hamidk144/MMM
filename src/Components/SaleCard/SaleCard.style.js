@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../globalStyles";
 
 export const SaleContainer= styled.div`
 
@@ -8,6 +9,11 @@ display: flex;
 background-color: #efefef; 
 border-bottom: 3px solid #facaa7;;
 padding: 40px;
+${media.mobile}{
+    width: 90%;
+    height: 30vh;
+    padding: 35px;
+}
 
 `
 
@@ -18,6 +24,9 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 flex: 1;
+${media.mobile}{
+flex:0.5;
+}
 
 `
 

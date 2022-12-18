@@ -8,6 +8,7 @@ import {
     Twitter,
   } from "@material-ui/icons";
   import styled from "styled-components";
+import { media } from "../../globalStyles";
   /* import { mobile } from "../responsive"; */
   
   const Container = styled.div`
@@ -18,6 +19,7 @@ import {
     padding-bottom:20px;
     color: white;
     justify-content: center;
+   
     
   `;
   
@@ -34,6 +36,18 @@ import {
   const Desc = styled.p`
     margin: 20px 0px;
     width: 80%;
+    ${media.mobile}{
+      display:none;
+    }
+  `;
+  const Desc2 = styled.p`
+  margin: 20px 0px;
+  width: 80%;
+    display:none;
+    ${media.mobile}{
+      display:block;
+    }
+
   `;
   
   const SocialContainer = styled.div`
@@ -55,6 +69,9 @@ import {
   const Center = styled.div`
     flex: 1;
     padding: 20px;
+    ${media.mobile}{
+      display:none;
+    }
    
   `;
   
@@ -78,6 +95,9 @@ import {
   const Right = styled.div`
     flex: 1;
     padding: 20px;
+    ${media.mobile}{
+      display:none;
+    }
    
   `;
   
@@ -101,6 +121,9 @@ import {
             the majority have suffered alteration in some form, by injected
             humour, or randomised words which don’t look even slightly believable.
           </Desc>
+          <Desc2>
+          &copy; 2022, MMM all rights reserved
+          </Desc2>
           <SocialContainer>
             <SocialIcon color="3B5999">
               <Facebook />

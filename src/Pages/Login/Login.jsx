@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import Navbar from "../../Components/Navbar/Navbar";
+import { media } from "../../globalStyles";
 /* import {mobile} from "../responsive"; */
 
 const Container = styled.div`
   width: 100vw;
-  min-height: calc(100vh - 105px) ;
+  height: calc(100vh - 70px) ;
+  
   background: linear-gradient(
       rgba(255, 255, 255, 0.216),
       rgba(255, 255, 255, 0.255)
@@ -16,12 +18,23 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  ${media.mobile}{
+  height: 100vh;
+    background-size: cover;
+
+  }
 `;
 
 const Wrapper = styled.div`
   width: 25%;
   padding: 20px;
   background-color: white;
+
+  ${media.mobile}{
+    width: 90%
+
+  }
   
 `;
 

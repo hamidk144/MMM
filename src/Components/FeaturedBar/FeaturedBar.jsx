@@ -31,7 +31,7 @@ const FeaturedBar = ({ title, variation }) => {
 
             return (
               <div key={data.id}>
-                <Product data={data} />
+                <Product type="homeproducts" data={data} />
               </div>
             )
           })}

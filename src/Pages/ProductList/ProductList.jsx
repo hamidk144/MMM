@@ -4,7 +4,7 @@ import Products from "../../Components/Products/Products";
 import NewsLetter from "../../Components/NewsLetter/NewsLetter";
 import Footer from "../../Components/Footer/Footer";
 import { Title } from "../../global.styles";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 
 
@@ -20,6 +20,9 @@ width: 100%;
 `;
 
 const TitleContainer= styled.div`
+display:flex;
+flex-direction: column;
+align-items:center;
 margin-left: 50px;
 margin-top: 30px;
 `
@@ -61,9 +64,11 @@ const {name} = useParams();
       
     <Container>
     <TitleContainer>
+      
         <Title >Mobile Phones</Title>
+        <p style={{color:'crimson', textAlign:"center" }}>online shoping currently not available <br/> <Link to="/contact" style={{color:'#3681e3'}}> please visit our store.</Link></p>
         </TitleContainer>
-      <FilterContainer>
+      {/* <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
           <Select>
@@ -96,13 +101,18 @@ const {name} = useParams();
             <Option>Price (desc)</Option>
           </Select>
         </Filter>
-      </FilterContainer>
+      </FilterContainer> */}
 
 
       <Products type={name}/>
 
 
     </Container>
+
+    <Container>
+      
+    </Container>
+    
       <NewsLetter/>
       <Footer/>
     </>
