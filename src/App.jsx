@@ -10,6 +10,7 @@ import Register from './Pages/Register/Register';
 import RepairLab from './Pages/RepairLab/RepairLab';
 import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
+import Checkout from './Pages/Checkout/Checkout';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <Route path="/register" element={<Register/>} />
       <Route path="/login" element={<Login/>} />
       <Route path="/cart" element={<Cart/>} />
+      <Route path="/checkout" element={<Checkout/>} />
       <Route path="/repairlab" element={<RepairLab/>} />
       <Route path="/about" element={<About/>} />
       <Route path="/contact" element={<Contact/>} />

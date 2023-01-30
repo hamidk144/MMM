@@ -42,7 +42,7 @@ ${media.mobile}{
 }
 `
 
-export const CategoryBox= styled.div`
+export const CategoryBox= styled.label`
 
 width: calc(100% / 3);
 height: calc(100% / 1.9);

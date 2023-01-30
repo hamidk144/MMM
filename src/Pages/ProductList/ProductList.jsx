@@ -5,6 +5,7 @@ import NewsLetter from "../../Components/NewsLetter/NewsLetter";
 import Footer from "../../Components/Footer/Footer";
 import { Title } from "../../global.styles";
 import { Link, useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 
 
@@ -54,8 +55,12 @@ const Option = styled.option``;
 
 const ProductList = () => {
 
+  
 
 const {name} = useParams();
+
+
+
 
   return (
 
@@ -65,8 +70,10 @@ const {name} = useParams();
     <Container>
     <TitleContainer>
       
-        <Title >Mobile Phones</Title>
-        <p style={{color:'crimson', textAlign:"center" }}>online shoping currently not available <br/> <Link to="/contact" style={{color:'#3681e3'}}> please visit our store.</Link></p>
+       {name==="mobilePhones" && <Title >Mobile Phones & Gadgets</Title> }
+       {name==="mobileAcc" && <Title> Accessories </Title> }
+       {name==="repairAcc" && <Title> Mobile Repair Accessories </Title> }
+        <p style={{color:'gray', opacity:"0.8", textAlign:"center" }}>online shoping currently not available <br/> <Link to="/contact" style={{color:'#3681e3'}}> please visit our store.</Link></p>
         </TitleContainer>
       {/* <FilterContainer>
         <Filter>

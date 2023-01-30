@@ -14,6 +14,7 @@ span{
 
 export const HomeContainer= styled.div`
 background-color: whitesmoke;
+overflow:hidden;
 `
 
 

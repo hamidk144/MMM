@@ -1,8 +1,10 @@
 import { Add, Remove } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Navbar/Navbar";
 import { Title } from "../../global.styles";
+import { media } from "../../globalStyles";
 
 /* import { mobile } from "../responsive"; */
 
@@ -10,7 +12,10 @@ const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding: 40px;
- 
+  ${media.mobile}{
+   
+    padding:5px;
+      }
 `;
 
 
@@ -20,6 +25,12 @@ const Top = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+
+  ${media.mobile}{
+  justify-content:center;
+width:99%;
+padding:5px;
+  }
 `;
 
 const TopButton = styled.button`
@@ -30,6 +41,11 @@ const TopButton = styled.button`
   background-color: ${(props) =>
     props.type === "filled" ? "#1F4690" : "transparent"};
   color: ${(props) => props.type === "filled"? 'white': "crimson"};
+
+  ${media.mobile}{
+    padding:3px;
+    display:none;
+        }
 `;
 
 const TopTexts = styled.div`
@@ -44,11 +60,21 @@ const TopText = styled.span`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
+  ${media.mobile}{
+  flex-direction:column;
+      }
   
 `;
 
 const Info = styled.div`
   flex: 3;
+  margin-left:20px;
+  color:lightCoral;
+  ${media.mobile}{
+   display:flex;
+   justify-content:center;
+        }
+    
 `;
 
 const Product = styled.div`
@@ -124,6 +150,11 @@ const Summary = styled.div`
   border-radius: 10px;
   padding: 20px;
   height: 50vh;
+  ${media.mobile}{
+    padding:15px;
+    margin:5px 20px;
+    margin-top:20px
+        }
 `;
 
 const SummaryTitle = styled.h1`
@@ -155,7 +186,7 @@ const Cart = () => {
   return (
     <Container>
       <Navbar/>
-      <Title style={{textAlign:'center', marginTop:'30px'}}>YOUR <span>BAG</span></Title>
+      <Title style={{textAlign:'center', marginTop:'30px'}}>YOUR <span>CART</span></Title>
       <Wrapper>
         <Top>
           <TopButton>CONTINUE SHOPPING</TopButton>
@@ -167,77 +198,29 @@ const Cart = () => {
         </Top>
         <Bottom>
           <Info>
-            <Product>
-              <ProductDetail>
-                <Image src="https://shoprex.com/images/srproducts/large/d20-fitness-bracelet-blood-pressure-bluetooth-heart-rate-monitor-light-green_45659.jpg" />
-                <Details>
-                  <ProductName>
-                    <b>Product:</b> JESSIE THUNDER SHOES
-                  </ProductName>
-                  <ProductId>
-                    <b>ID:</b> 93813718293
-                  </ProductId>
-                  <ProductColor color="black" />
-                  <ProductSize>
-                    <b>Size:</b> 37.5
-                  </ProductSize>
-                </Details>
-              </ProductDetail>
-              <PriceDetail>
-                <ProductAmountContainer>
-                  <Add />
-                  <ProductAmount>2</ProductAmount>
-                  <Remove />
-                </ProductAmountContainer>
-                <ProductPrice>$ 30</ProductPrice>
-              </PriceDetail>
-            </Product>
-            <Hr />
-            <Product>
-              <ProductDetail>
-                <Image src="https://images.unsplash.com/photo-1610438235354-a6ae5528385c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YWlycG9kc3xlbnwwfHwwfHw%3D&w=1000&q=80" />
-                <Details>
-                  <ProductName>
-                    <b>Product:</b> HAKURA T-SHIRT
-                  </ProductName>
-                  <ProductId>
-                    <b>ID:</b> 93813718293
-                  </ProductId>
-                  <ProductColor color="gray" />
-                  <ProductSize>
-                    <b>Size:</b> M
-                  </ProductSize>
-                </Details>
-              </ProductDetail>
-              <PriceDetail>
-                <ProductAmountContainer>
-                  <Add />
-                  <ProductAmount>1</ProductAmount>
-                  <Remove />
-                </ProductAmountContainer>
-                <ProductPrice>$ 20</ProductPrice>
-              </PriceDetail>
-            </Product>
+            Your Cart is Empty
+           
           </Info>
           <Summary>
             <SummaryTitle>ORDER SUMMARY</SummaryTitle>
             <SummaryItem>
               <SummaryItemText>Subtotal</SummaryItemText>
-              <SummaryItemPrice>$ 80</SummaryItemPrice>
+              <SummaryItemPrice>$ 00</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Estimated Shipping</SummaryItemText>
-              <SummaryItemPrice>$ 5.90</SummaryItemPrice>
+              <SummaryItemPrice>$ 00.0</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem>
               <SummaryItemText>Shipping Discount</SummaryItemText>
-              <SummaryItemPrice>$ -5.90</SummaryItemPrice>
+              <SummaryItemPrice>$ 00.00</SummaryItemPrice>
             </SummaryItem>
             <SummaryItem type="total">
               <SummaryItemText>Total</SummaryItemText>
-              <SummaryItemPrice>$ 80</SummaryItemPrice>
+              <SummaryItemPrice>$ 00.00</SummaryItemPrice>
             </SummaryItem>
-            <Button>CHECKOUT NOW</Button>
+            <Button>
+              <Link to="/checkout" style={{textDecoration:"none",color:"white"}}> CHECKOUT NOW </Link></Button>
           </Summary>
         </Bottom>
       </Wrapper>

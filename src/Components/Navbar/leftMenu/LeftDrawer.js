@@ -66,7 +66,7 @@ const LeftDrawer = ({isDrawerOpen ,setIsDrawerOpen}) => {
 
           <ul>
           <NavLink  to="/repairlab"  className="sidedrawer--link">
-           Repair Acessories
+           Repair Lab
            </NavLink>
           </ul>
           <hr />

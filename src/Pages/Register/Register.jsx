@@ -5,13 +5,12 @@ import { media } from "../../globalStyles";
 
 const Container = styled.div`
   width: 100vw;
-  height: calc(100vh - 105px);
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("https://media.istockphoto.com/photos/textbooks-on-wooden-school-desk-with-chalkboard-picture-id1033277722?b=1&k=20&m=1033277722&s=170667a&w=0&h=sPkUuyDN23-yM5CHNN03qLo7Azph_Ud_SEcAJhelcjE=")
-      center;
+  height:100vh;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  
+  
+
   background-size: cover;
   display: flex;
   align-items: center;

@@ -1,13 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 import FeaturedBar from '../../Components/FeaturedBar/FeaturedBar';
-import Footer from '../../Components/Footer/Footer'
-import Navbar from '../../Components/Navbar/Navbar'
-import { Title } from '../../global.styles'
+import Footer from '../../Components/Footer/Footer';
+import Navbar from '../../Components/Navbar/Navbar';
+import { Title } from '../../global.styles';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CallIcon from '@mui/icons-material/Call';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
-import { media } from '../../globalStyles'
+import { media } from '../../globalStyles';
 
 
 
@@ -15,6 +15,7 @@ const ContactContainer = styled.div`
   margin: 40px;
   margin-top: 70px;
   display: flex;
+  background-color:white !important;
   justify-content:center;
   ${media.mobile}{
     flex-direction:column;
@@ -132,7 +133,7 @@ justify-content: flex-end;
 
 const Contact = () => {
   return (
-    <div style={{backgroundColor:"whitesmoke"}}>
+    <div style={{backgroundColor:"white"}}>
         
     <Navbar/>
 
@@ -151,7 +152,7 @@ const Contact = () => {
             <LocationOnIcon style={{color:"#3681e3"}}/>MMM Haji Iqbal Plaza, Kabal, Swat, Pakistan 
             </ContactField>
           <ContactField>
-            <CallIcon style={{color:"#3681e3"}}/> +92 345 9146648 | +92 345 9518263
+            <CallIcon style={{color:"#3681e3"}}/> +92 345 9146648 
             </ContactField>
           <ContactField>
             <MailOutlineIcon style={{color:"#3681e3"}}/> mmmshop@gmail.com

@@ -117,9 +117,8 @@ import { media } from "../../globalStyles";
         <Left>
           <Logo>MMM.</Logo>
           <Desc>
-            There are many variations of passages of Lorem Ipsum available, but
-            the majority have suffered alteration in some form, by injected
-            humour, or randomised words which don’t look even slightly believable.
+            MMM is a consumer electronics store and RepairLab, dedicated to providing high-quality smartphones and repair services to customers.
+        
           </Desc>
           <Desc2>
           &copy; 2022, MMM all rights reserved
@@ -157,13 +156,13 @@ import { media } from "../../globalStyles";
         <Right>
           <Title>Contact</Title>
           <ContactItem>
-            <Room style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
+            <Room style={{marginRight:"10px"}}/> MMM Haji Iqbal Plaza , Kabal, Swat, Pakistan
           </ContactItem>
           <ContactItem>
-            <Phone style={{marginRight:"10px"}}/> +1 234 56 78
+            <Phone style={{marginRight:"10px"}}/> +92 345 9146648 
           </ContactItem>
           <ContactItem>
-            <MailOutline style={{marginRight:"10px"}} /> contact@lama.dev
+            <MailOutline style={{marginRight:"10px"}} /> mmmshop@gmail.com
           </ContactItem>
           <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
         </Right>

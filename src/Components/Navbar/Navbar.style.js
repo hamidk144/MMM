@@ -19,7 +19,7 @@ export const NavMiddle = styled.div`
   background-color: rgba(253, 249, 249, 0.827);
   border-bottom: 0.1px solid rgba(76, 17, 25, 0.349);
   height: 70px;
-  position: sticky;
+  position: sticky !important;
   top: 0;
   z-index: 100;
   backdrop-filter: blur(6px);

@@ -7,34 +7,31 @@ import { Title } from "../../global.styles";
 import { media } from "../../globalStyles";
 
 const AboutContainer = styled.div`
- 
   margin: 40px;
   margin-top: 70px;
   margin-bottom: 70px;
   display: flex;
-  
-  
 `;
 
 const AboutLeft = styled.div`
   flex: 2;
-  margin-top:40px;
-  width:50%;
+  margin-top: 40px;
+  width: 50%;
 `;
 const AboutRight = styled.div`
   flex: 1.5;
-  display:flex;
+  display: flex;
   justify-content: flex-end;
-  img{
-    height:600px;
+  img {
+    height: 600px;
     width: 90%;
-    object-fit:cover;
+    object-fit: cover;
     border-left: 8px solid coral;
     border-top: 8px solid coral;
   }
 
   ${media.mobile} {
-    display:none;
+    display: none;
   }
 `;
 
@@ -58,33 +55,37 @@ const About = () => {
       <Navbar />
 
       <ImgContainer>
-        <Title style={{ marginBottom: "30px", color: "white" }}>About Us:</Title>
+        <Title style={{ marginBottom: "30px", color: "white" }}>
+          About Us:
+        </Title>
       </ImgContainer>
 
       <AboutContainer>
         <AboutLeft>
-          <p style={{fontWeight:"600"}}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-            blanditiis, molestias delectus iste aliquam deserunt reprehenderit
-            consequatur enim sunt nemo quae veniam vitae sapiente harum,
-            deleniti, autem modi mollitia accusantium? Nemo est animi ab illo
-            eligendi. Tempora, autem? Quibusdam earum corporis alias, enim iste
-            dolorum fugiat ratione accusamus cumque voluptatibus sapiente ut?
-            Tempora fugiat doloremque nihil nobis ea corrupti veritatis!
+          <p style={{ fontWeight: "600" }}>
+            Welcome to our website! We are a team of professionals dedicated to
+            providing high-quality smartphone repair services to our customers.
+            In addition to our repair services, we also offer a wide selection
+            of repairing accessories and tools for those who prefer to fix their
+            own devices. 
           </p>
           <br />
           <br />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
-            blanditiis, molestias delectus iste aliquam deserunt reprehenderit
-            consequatur enim sunt nemo quae veniam vitae sapiente harum,
-            deleniti, autem modi mollitia accusantium? Nemo est animi ab illo
-            eligendi. Tempora, autem? Quibusdam earum corporis alias, enim iste
-            dolorum fugiat ratione accusamus cumque voluptatibus sapiente ut?
-            Tempora fugiat doloremque nihil nobis ea corrupti veritatis!
-          </p>
+          <p>In addition to repair services and accessories, we also
+            sell a variety of smartphones and smartphone accessories. From the
+            latest releases to more budget-friendly options, we have something
+            for everyone. Our team is knowledgeable about all of the products we
+            sell and can help you find the perfect fit for your needs and
+            budget.</p>
+            <br/>
+            <p>
+               We are committed to delivering excellent customer service
+            and ensuring that all of our clients leave satisfied with their
+            experience. Thank you for considering us for all of your smartphone
+            repair and accessory needs.
+            </p>
+         
+         
         </AboutLeft>
 
         <AboutRight>
@@ -94,7 +95,6 @@ const About = () => {
           />
         </AboutRight>
       </AboutContainer>
-
 
       <FeaturedBar title="Featured Products" variation="about" />
 

@@ -3,7 +3,7 @@ import {
   SearchOutlined,
   ShoppingCartOutlined,
 } from "@material-ui/icons";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import UseClickOutside from "../../Helpers/UseClickOutside";
 import LeftDrawer from "./leftMenu/LeftDrawer";
@@ -35,6 +35,12 @@ const Navbar = () => {
         setIsActive(false);
       });
 
+      useEffect(() => {
+        const body= document.querySelector('body');
+        body.style.overflow= isDrawerOpen? 'hidden':'auto';
+        
+      }, [isDrawerOpen])
+
   return (
     <>
    
@@ -60,7 +66,7 @@ const Navbar = () => {
           </NavItems>
 
           <NavItems variant="white">
-            <Link className="link" to="/cart">
+            <Link className="link" to="/checkout">
               Checkout{" "}
             </Link>
           </NavItems>
@@ -117,7 +123,7 @@ const Navbar = () => {
                   </Link>
                   <Link
                    
-                   to="/products/mobileAcc"                   
+                   to="/products/repairAcc"                   
                    onClick={() => setIsActive(false)}
                    className="link"
 
@@ -157,12 +163,12 @@ const Navbar = () => {
               <SearchOutlined style={{ color: "rgb(203, 45, 65)" }} />
             </Searchcontainer>
 
-            <Link className="mainlink" to="account">
+            <Link className="mainlink" to="/login">
               {" "}
               <PermIdentityOutlined style={{ fontSize: "28px" }} />{" "}
             </Link>
 
-            <Link className="mainlink" to="cart">
+            <Link className="mainlink" to="/cart">
               <CartContainer>
                 <ShoppingCartOutlined style={{ fontSize: "28px" }} />
                 <span style={{ color: "rgb(203, 45, 65)" }}>0.00 $</span>

@@ -24,12 +24,12 @@ const Info = styled.div`
 
 const Container = styled.div`
   margin: 5px;
-  min-width: 260px;
-  height: 260px;
+  min-width: 220px;
+  height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:rgb(25, 37, 50);
+  background-color:rgb(47, 44, 87);
   /* border-bottom: 4px solid crimson; */
  
   position: relative;
@@ -52,10 +52,10 @@ const Container = styled.div`
 `;
 
 const Circle = styled.div`
-  width: 240px;
-  height: 240px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  background-color: #fefeff;
+  background-color: rgb(255, 186, 154);
   position: absolute;
 
   ${media.mobile}{
@@ -70,8 +70,8 @@ const Circle = styled.div`
 `;
 
 const Image = styled.img`
-  height: 260px;
-  width: 260px;
+  height: 220px;
+  width: 220px;
   opacity: 0.9;
   object-fit: cover;
   z-index: 2;

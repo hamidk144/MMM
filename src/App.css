@@ -2,4 +2,10 @@
     font-size: 38px !important;
     margin-right: 15px;
     color: rgba(220, 20, 60, 0.737);
+    
+   
+}
+
+.App{
+    overflow-x: hidden;
 }

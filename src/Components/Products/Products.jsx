@@ -34,7 +34,7 @@ const Products = ({type}) => {
       setProductsData(repairAcc);
     }
     
-  },[])
+  },[type])
 
 
   return (
